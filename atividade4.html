@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando CSS</title>
+    
+    <style>
+        h3, h4{
+            color: rgb(33, 24, 94);
+            margin: 40px;
+        }
+
+        header {
+            background-color: rgb(48, 48, 92);
+            width: 100vw;
+        }
+
+        .titulo {
+            padding: 60px;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            padding-left: 20px;
+            background-color: rgb(44, 81, 147);
+        }
+
+        nav a{
+            border-radius: 10px;
+            color: white;
+            display: inline-block;
+            padding: 20px;
+            margin: 15px;
+            font-weight: 700;
+        }
+
+        nav a:hover{
+            background-color: aqua;
+        }
+
+        .marca {
+            padding: 20px;
+            align-self: center;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 20px;
+            text-align: left;
+            background-color: rgb(168, 176, 173);
+        }
+
+        main { 
+            margin: 10px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+
+
+        div {
+            margin: 40px;
+            border: 2px solid rgb(194, 192, 204);
+            border-radius: 10px;
+        }
+
+        p {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .imagens img{
+            padding-left: 40px;            
+        }
+
+        footer {
+            margin: 0px;
+            background-color: rgb(51, 51, 115);
+            text-align: center;
+            border-radius: 10px;
+            
+        }
+
+        footer p {
+            font-size: 24px;
+            color: white;
+            padding: 40px;
+        }
+
+        .lista_contato {
+            margin-left: 40px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header class="home" name="home" id="home">
+        <h1 class="titulo">Treinando CSS com estilo</h1>
+        <nav class="navbar">
+            <center>
+
+                <a href="#home">Inicio</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </center>
+        </nav>
+    </header>
+
+    <main>
+        <center>
+            <img class="marca" src="/marca.png" alt="marca">
+        </center>
+        
+        
+        <section >
+            <h3>Inicio</h3>
+            <div class="inicio">
+                <h4>Bem vindo ao site Treinando CSS</h4>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Possimus officia minima odio dolorem sit doloremque quam 
+                    illum ad tempore! At, numquam perferendis inventore provident
+                    sint deleniti aut dolorem repellat repudiandae.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Possimus officia minima odio dolorem sit doloremque quam 
+                    illum ad tempore! At, numquam perferendis inventore provident
+                    sint deleniti aut dolorem repellat repudiandae.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Possimus officia minima odio dolorem sit doloremque quam 
+                    illum ad tempore! At, numquam perferendis inventore provident
+                    sint deleniti aut dolorem repellat repudiandae.
+                </p>
+            </div>
+        </section>
+        
+        <section id="sobre">
+            <h3>Sobre nós</h3>
+            <div class="sobre" name="sobre" >
+                <h4>Bem vindo ao site Treinando CSS</h4>
+                <section class="imagens">
+
+                    <center>
+                        <img src="/cj.png" alt="cj">
+                        <img src="/johnny.png" alt="cj">
+                        <img src="/mark.png" alt="cj">
+                        <img src="/joey.png" alt="cj">
+                    </center>
+
+                </section>
+                <p>
+                    We are the Ramones. One, two, Three, Four.
+                </p>
+            </>
+        </section>
+        <section >
+            <div class="missao">
+                <h3>Missão</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Possimus officia minima odio dolorem sit doloremque quam 
+                    illum ad tempore! At, numquam perferendis inventore provident
+                    sint deleniti aut dolorem repellat repudiandae.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Possimus officia minima odio dolorem sit doloremque quam 
+                    illum ad tempore! At, numquam perferendis inventore provident
+                    sint deleniti aut dolorem repellat repudiandae.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Possimus officia minima odio dolorem sit doloremque quam 
+                    illum ad tempore! At, numquam perferendis inventore provident
+                    sint deleniti aut dolorem repellat repudiandae.
+                </p>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Possimus officia minima odio dolorem sit doloremque quam 
+                    illum ad tempore! At, numquam perferendis inventore provident
+                    sint deleniti aut dolorem repellat repudiandae.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Possimus officia minima odio dolorem sit doloremque quam 
+                    illum ad tempore! At, numquam perferendis inventore provident
+                    sint deleniti aut dolorem repellat repudiandae.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Possimus officia minima odio dolorem sit doloremque quam 
+                    illum ad tempore! At, numquam perferendis inventore provident
+                    sint deleniti aut dolorem repellat repudiandae.
+                </p>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h3>Contato</h3>
+            <div class="contato" name="contato" >
+                <h4>Entre em contato</h4>
+                <p>
+                    Se deseja contratar nosso shows entre em contato pelos meios:
+                </p>
+                <ul class="lista_contato">
+                    <li>
+                        <p>Email: <a href="contato@ramones.com">contato@ramones.com</a></p>
+                    </li>
+                    <li>
+                        <p>Telefone: 555 0102 RAMONES</p>
+                    </li>
+                    <li>
+                        <p>Endereço: 315 Bowery, Manhattan, New York - CBGB </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Treinando CSS. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

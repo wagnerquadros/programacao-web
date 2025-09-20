@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin: 0 auto;
+            width: 1440px;
+            background-color: gray;
+        }
+
+        .logo {
+            max-width: 60px;
+            height: auto;       
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            width: 100%;
+            padding: 20px 40px;
+            background-color: #fff;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .links a {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000;     
+            padding: 8px 12px;           
+        }
+
+        .links a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .principal {
+            display: flex;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .navegacao {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .primeiro {
+            display: grid;
+            grid-template-columns: 720px 720px;
+            background-color: #F8F8F8;
+        }
+       
+        .item h1,
+        .item p {
+            text-align: left; 
+        }
+
+        .item {
+            max-width: 480px;     
+            margin: auto;        
+            display: flex;
+            flex-direction: column;              
+        }
+
+        .segundo {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .clientes {
+            text-align: center;
+        }
+
+        .quadros {
+            margin: 0 auto;
+            margin-bottom: 120px;
+        }
+
+        .img-list {
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 720px 720px;
+            background-color: white;
+        }
+
+        .lista {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            text-align: left;        
+            max-width: 600px;        
+            width: 100%;     
+            margin: 0 auto;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600; 
+            font-size: 20px;
+            color: #606060;
+            line-height: 160%;         
+        }
+
+
+         button {
+            background-color: black;
+            width: 162px;
+            height: 60px;
+            font-weight: 600;
+            font-size: 16px;
+            color: white;
+        }
+
+        .terceiro {
+            background-color: #F8F8F8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        }
+
+        .quadrao {
+            margin-bottom: 80px;
+        }
+
+        .quarto {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;   
+        }
+
+        .lista-figs {
+            padding: 50px;
+            display: flex;
+            align-content: center;
+            margin-bottom: 60px;
+            gap: 40px;
+        }
+
+        .quinto{
+            background-color: #F8F8F8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .blog-imagens {
+            display: grid;
+            grid-template-columns:365px 365px 365px;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .blog-imagens span {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+            text-align: left;
+            color: #606060;
+            max-width: 365px;
+        }
+
+        .quinto-botao {
+            display: flex;
+            justify-content: center;   
+            margin: 40px 0 60px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 100%;   
+            letter-spacing: 0;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            max-width: 365px;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600; 
+            font-size: 20px;
+            line-height: 160%;
+            text-align: center;
+            color: #8b8b8b;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .sexto {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            padding: 60px 0;
+        }
+
+        .texto-box {
+            background-color: black;
+            border-radius: 10px;
+            width: 1160px;
+            height: 100px;
+            padding: 27px 50px;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+        }
+
+        .texto-box button {
+            background-color: rgb(255, 255, 255);
+            width: 162px;
+            height: 60px;
+            font-weight: 600;
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            margin-top: 20px;
+        }
+        
+        .rodape {
+            background: #F8F8F8;    
+            color: #000000;
+            padding: 60px 40px;
+        }
+
+        .rodape-container {
+            max-width: 1160px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .rodape-col h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            
+        }
+
+        .rodape-logo {
+            display: block;
+            margin-bottom: 16px;
+            max-width: 60px;
+            height: auto; 
+        }
+
+        .rodape-col p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #aaa;
+            text-align: left;
+        }
+
+        .rodape-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #aaa;
+        }
+
+        .rodape-col ul li {
+            margin-bottom: 10px;
+        }
+
+
+        .rodape-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .rodape-social span {
+            width: 30px;
+            height: 30px;
+            background: #797979;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .happy-clients {
+            background-color: #fff;      
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .titulo-happy h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .depoimentos {
+            max-width: 1000px;           
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px
+        }
+
+        .depo-cliente {
+            background-color: #F8F8F8;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: left;
+            font-family: 'Open Sans', sans-serif;
+            color: #606060;
+        }
+
+        .depo-cliente p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #606060;
+            text-align: left;
+        }
+
+        .cliente-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .foto {
+            width: 48px;
+            height: 48px;
+            background-color: #000;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .cliente-info h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 4px;
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+        <header>
+            <div class="principal">
+                <nav class="navegacao">
+                    <img class="logo" src="/logo.png" alt="logo">
+                    <div class="links">
+                        <a>Link 1</a>
+                        <a>Link 2</a>
+                        <a>Link 3</a>
+                        <a>Link 4</a>
+                        <a>Link 5</a>
+                    </div>
+                    <button>Button</button>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="primeiro">
+                <div class="item">
+                    <h1>Great designs sei lá o quê</h1>
+                    <p>Loren alguma coisa ipsilon</p>
+                    <button>Button</button>
+                </div>
+                <div>
+                    <img src="https://placehold.co/720x628" alt="imagem1">
+                </div>
+            </div>
+
+            <div class="segundo">
+                <div class="clientes">
+                    <h1>Why our cliente are so top</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. 
+                        Elementum nisl duis tortor sed. Suspendisse 
+                        lobortis vitae quis vehicula pellentesque sit id. 
+                        Urna posuere consequat velit vulputate faucibus 
+                        pretium arcu accumsan sit. Vel venenatis sapien.
+                    </p>
+                </div>
+                <div class="img-list">
+                    <div class="quadros">
+                        <div class="quadro-linha">
+                            <img src="https://placehold.co/290x250" alt="imagem2">
+                            <img src="https://placehold.co/155x205" alt="imagem3">
+                        </div>
+                        <div class="quadro-menor">
+                            <img src="https://placehold.co/245x185" alt="imagem3">
+                        </div>
+                    </div>
+                    <div class="lista">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                        </ul>
+                        <button>Button</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terceiro">
+                <div class="business">
+                    <h1>Why our cliente are so top</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. 
+                        Elementum nisl duis tortor sed. Suspendisse 
+                        lobortis vitae quis vehicula pellentesque sit id. 
+                        Urna posuere consequat velit vulputate faucibus 
+                        pretium arcu accumsan sit. Vel venenatis sapien.
+                    </p>
+                </div>
+                <div class="stats">
+                    <div>
+                        <h3>Clientes</h3>
+                        <p>12k</p>
+                    </div>
+                    <div>
+                        <h3>Crecimento anual</h3>
+                        <p>55%</p>
+                    </div>
+                    <div>
+                        <h3>Projetos</h3>
+                        <p>5k</p>
+                    </div>
+                    <div>
+                        <h3>Positive Rating</h3>
+                        <p>80%</p>
+                    </div>
+                </div>
+                <div class="quadrao">
+                    <img src="https://placehold.co/1160x645" alt="imagem4">
+                </div>
+            </div>
+
+            <section class="quarto">
+                <div class="titulo-section4">
+                    <h1>Só a parceria</h1>
+                </div>
+                <div class="lista-figs">
+                    <img src="https://placehold.co/210x60" alt="imagem5">
+                    <img src="https://placehold.co/210x60" alt="imagem6">
+                    <img src="https://placehold.co/210x60" alt="imagem7">
+                    <img src="https://placehold.co/210x60" alt="imagem8">
+                </div>
+            </section>
+
+            <section class="quinto">
+                <div class="titulo-section5">
+                    <h1>Lastest Blog</h1>
+                </div>
+
+                <div class="blog-imagens">
+                    <div>
+                        <img src="https://placehold.co/365x230" alt="imagem9">
+                        <h3>Humans are not humans are animals</h3>
+                        <span>humans are not the only animal who thinks, they are the only animal who think that is not an animal</span>
+                        <span>Learn more</span>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/365x230" alt="imagem9">
+                        <h3>Humans are not humans are animals</h3>
+                        <span>humans are not the only animal who thinks, they are the only animal who think that is not an animal</span>
+                        <span>Learn more</span>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/365x230" alt="imagem9">
+                        <h3>Humans are not humans are animals</h3>
+                        <span>humans are not the only animal who thinks, they are the only animal who think that is not an animal</span>
+                        <span>Learn more</span>
+                    </div>
+                </div>
+                <div class="quinto-botao">
+                    <button>Button</button>
+                </div>
+            </section>
+
+
+            <section class="happy-clients">
+                <div class="titulo-happy">
+                    <h1>Our happy clients</h1>
+                </div>
+                <div class="depoimentos">
+                    <div class="depo-cliente">
+                        <p>Lorem ipsum dolor sit amet consectetur. Condimentum eget vitae ligula sed urna sit sagittis interdum a. Blandit mattis mattis lobortis orci. Facilisis dui sagittis tempor egestas pellentesque eu maecenas. Risus lectus nisl.</p>
+                        <div>
+                            <span class="foto"></span>
+                            <div class="cliente-info">
+                                <h4>Jaquelino dos Teatros</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="depo-cliente">
+                        <p>Lorem ipsum dolor sit amet consectetur. Condimentum eget vitae ligula sed urna sit sagittis interdum a. Blandit mattis mattis lobortis orci. Facilisis dui sagittis tempor egestas pellentesque eu maecenas. Risus lectus nisl.</p>
+                        <div>
+                            <span class="foto"></span>
+                            <div class="cliente-info">
+                                <h4>Jaquelino dos Teatros</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="sexto">
+                <div class="texto-box">
+                    <div class="informacao">   
+                         <h2>Need more information?</h2>
+                         <p>Deixe seu comentário e alguém vai te chamar nem que seja de louco</p>
+                    </div>
+                    <div class="btn-informacao">
+                        <button>Button</button>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="rodape">
+                <div class="rodape-container">
+                    
+                    <div class="rodape-col">
+                        <img class="rodape-logo" src="/logo.png" alt="logo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                    </div>
+
+                    <div class="rodape-col">
+                        <h4>Links</h4>
+                        <ul>
+                            <li>Home</li>
+                            <li>Sobre</li>
+                            <li>Serviços</li>
+                            <li>Contato</li>
+                        </ul>
+                    </div>
+
+                    <div class="rodape-col">
+                        <h4>Outros</h4>
+                        <ul>
+                            <li>Blog</li>
+                            <li>Carreiras</li>
+                            <li>FAQ</li>
+                            <li>Suporte</li>
+                        </ul>
+                    </div>
+
+                    <div class="rodape-col">
+                        <h4>Contato</h4>
+                        <div class="rodape-social">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+
+        </main>
+
+</body>
+</html>

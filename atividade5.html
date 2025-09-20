@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando CSS</title>
+    
+    <style>
+        h3, h4{
+            color: rgb(33, 24, 94);
+            margin: 40px;
+        }
+
+        header {
+            background-color: rgb(48, 48, 92);
+            width: 100vw;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        .titulo {
+            padding: 60px;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            padding-left: 20px;
+            background-color: rgb(44, 81, 147);
+        }
+
+        nav a{
+            border-radius: 10px;
+            color: white;
+            display: inline-block;
+            padding: 20px;
+            margin: 15px;
+            font-weight: 700;
+        }
+
+        nav a:hover{
+            background-color: aqua;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 20px;
+            text-align: left;
+            background-color: rgb(168, 176, 173);
+        }
+
+        main { 
+            display: grid;
+            grid-template-columns: 1fr 300px;
+        }
+
+        .principal {
+            display: block;
+            margin: 10px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .noticias_populares {
+            margin: 10px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .noticas_titulo {
+            padding-left: 30px;
+            color: blue;
+        }
+
+        .lista_news {
+            font-weight:600;
+        } 
+
+        .inicio {
+            margin: 40px;
+            border: 2px solid rgb(194, 192, 204);
+            border-radius: 10px;
+        }
+
+        .subtitulo {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        p {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .imagens {
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;           
+        }
+
+        .comentarios {
+            display: flex;
+            justify-content: space-between;
+        }
+
+                footer {
+            margin: 0px;
+            background-color: rgb(51, 51, 115);
+            text-align: center;
+            border-radius: 10px;
+            
+        }
+
+        footer p {
+            font-size: 24px;
+            color: white;
+            padding: 40px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <header class="home" name="home" id="home">
+        <div class="titulo">
+            <h1 >Treinando CSS com estilo</h1>
+            <h2>Bem vindo ao sitema mais nada a ver do brasil varonil</h2>
+        </div>
+        
+        <nav class="navbar">
+                <div class="menu">
+                    <a href="#home">Home</a>
+                    <a href="#sobre">Sobre nós</a>
+                    <a href="#contato">Serviços</a>
+                    <a href="#contato">Blog</a>
+                    <a href="#contato">Contato</a>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="principal item1">
+                <h3>Artigos recentes</h3>
+                
+                <div class="inicio">
+
+                    <div class="subtitulo">
+                        <h4 class="item">Bem vindo ao site Treinando CSS</h4>
+                        <div class="item">
+                            <p >Autor: Wagner</p>
+                            <p >09 de setembro de 2025</p>
+                        </div>
+                    </div>
+
+                    <section class="imagens">
+                        <img src="https://placehold.co/600x150" alt="cj">
+                    </section>
+
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Possimus officia minima odio dolorem sit doloremque quam 
+                        illum ad tempore! At, numquam perferendis inventore provident
+                        sint deleniti aut dolorem repellat repudiandae.
+                        
+                    </p>
+                    <section class="comentarios">
+                        <h4 class="item">Comentários</h4>
+                        <h4 class="item">Ver notícia completa</h4>
+                    </section>
+                </div>    
+
+                                <div class="inicio">
+
+                    <div class="subtitulo">
+                        <h4 class="item">Bem vindo ao site Treinando CSS</h4>
+                        <div class="item">
+                            <p >Autor: Wagner</p>
+                            <p >09 de setembro de 2025</p>
+                        </div>
+                    </div>
+
+                    <section class="imagens">
+                        <img src="https://placehold.co/600x150" alt="cj">
+                    </section>
+
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Possimus officia minima odio dolorem sit doloremque quam 
+                        illum ad tempore! At, numquam perferendis inventore provident
+                        sint deleniti aut dolorem repellat repudiandae.
+                        
+                    </p>
+                    <section class="comentarios">
+                        <h4 class="item">Comentários</h4>
+                        <h4 class="item">Ver notícia completa</h4>
+                    </section>
+                </div> 
+
+                                <div class="inicio">
+
+                    <div class="subtitulo">
+                        <h4 class="item">Bem vindo ao site Treinando CSS</h4>
+                        <div class="item">
+                            <p >Autor: Wagner</p>
+                            <p >09 de setembro de 2025</p>
+                        </div>
+                    </div>
+
+                    <section class="imagens">
+                        <img src="https://placehold.co/600x150" alt="cj">
+                    </section>
+
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Possimus officia minima odio dolorem sit doloremque quam 
+                        illum ad tempore! At, numquam perferendis inventore provident
+                        sint deleniti aut dolorem repellat repudiandae.
+                        
+                    </p>
+                    <section class="comentarios">
+                        <h4 class="item">Comentários</h4>
+                        <h4 class="item">Ver notícia completa</h4>
+                    </section>
+                </div> 
+        </div>
+
+        <div class="lateral item2">
+            <div class="noticias_populares">
+                <h2 class="noticas_titulo">Notícias Populares</h2>
+                <ul class="lista_news">
+                    <li>Tecnoloigia voando</li>
+                    <li>Estourou a greve das empregadas</li>
+                    <li>Os policiais perseguem os contrabandistas</li>
+                    <li>Noticia supresa</li>
+                    <li>O futuro começa amanha, mas quando chegar amanha será presente</li>
+                </ul>
+            </div>
+            <section class="imagem_lateral">
+                <img src="https://placehold.co/300x50" alt="cj">
+            </section>
+
+            <div class="noticias_populares">
+                <h2 class="noticas_titulo">Redes Sociais</h2>
+                <ul class="lista_news">
+                    <li>Instagram</li>
+                    <li>Tik Tok</li>
+                    <li>Orkut</li>
+                    <li>My Space</li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Treinando CSS. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
