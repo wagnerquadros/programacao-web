@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Painel de Controle</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <aside class="col-3 col-md-2 bg-white p-3 border-end">
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-speedometer2 me-2"></i>
+            <strong>Painel de Controle</strong>
+          </div>
+
+          <nav class="nav flex-column gap-1">
+            <a class="nav-link active" href="#"
+              ><i class="bi bi-grid me-2"></i>Dashboard</a
+            >
+            <a class="nav-link" href="#"
+              ><i class="bi bi-person me-2"></i>Perfil</a
+            >
+            <a class="nav-link" href="#"
+              ><i class="bi bi-table me-2"></i>Tabelas</a
+            >
+            <a class="nav-link" href="#"
+              ><i class="bi bi-app-indicator me-2"></i>Ícones</a
+            >
+            <a class="nav-link" href="#"
+              ><i class="bi bi-geo-alt me-2"></i>Mapas</a
+            >
+            <a class="nav-link" href="#"
+              ><i class="bi bi-file-earmark-text me-2"></i>Páginas</a
+            >
+            <a class="nav-link" href="#"
+              ><i class="bi bi-info-circle me-2"></i>Informações</a
+            >
+          </nav>
+
+          <a class="btn btn-primary w-100 mt-3" href="#"
+            >Ir para Página Inicial</a
+          >
+        </aside>
+
+        <!-- Main -->
+        <main class="col-9 col-md-10 p-0">
+          <!-- Topbar -->
+          <div class="topbar py-2 bg-dark">
+            <div class="container-fluid d-flex align-items-center">
+              <form class="ms-auto me-3" role="search">
+                <div class="input-group input-group-sm">
+                  <input
+                    class="form-control bg-white text-dark"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="btn btn-outline-success bg-dark text-success border-success"
+                    type="submit"
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
+              <span class="me-2 text-white small">Admin</span>
+              <div
+                class="rounded-circle bg-black border border-secondary me-3"
+                style="width: 50px; height: 50px"
+              ></div>
+            </div>
+          </div>
+
+          <div class="container py-4">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h6 class="text-uppercase text-muted fw-bold mb-0">Dashboard</h6>
+              <button class="btn btn-sm btn-danger">Logout</button>
+            </div>
+
+            <!-- Métricas -->
+            <div class="row text-center mb-4">
+              <div class="col-12 col-md-4">
+                <div>
+                  <i class="bi bi-eye text-primary me-1"></i>
+                  <span class="fw-semibold">Visitas</span>
+                </div>
+                <div class="fs-4 fw-bold">659</div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div>
+                  <i class="bi bi-box-arrow-in-right text-warning me-1"></i>
+                  <span class="fw-semibold">Acessos</span>
+                </div>
+                <div class="fs-4 fw-bold">10</div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div>
+                  <i class="bi bi-chat-dots text-success me-1"></i>
+                  <span class="fw-semibold">Comentários</span>
+                </div>
+                <div class="fs-4 fw-bold">100</div>
+              </div>
+            </div>
+
+            <!-- Lista de posts -->
+            <h5 class="card-title mb-3 fw-bold">Postagens</h5>
+            <div class="card mb-4">
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="d-flex flex-wrap align-items-center">
+                      <div class="me-auto">
+                        <div class="small text-muted">
+                          Autor: <strong>Brelindo</strong> &nbsp;
+                          <span class="text-secondary">Data: 25/09/2025</span>
+                        </div>
+                        <div>
+                          O Impacto das Redes Sociais na Saúde Mental: O Que
+                          Você Precisa Saber
+                        </div>
+                      </div>
+                      <div class="ms-2">
+                        <button class="btn btn-sm btn-primary">Editar</button>
+                        <button class="btn btn-sm btn-danger">Excluir</button>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="list-group-item">
+                    <div class="d-flex flex-wrap align-items-center">
+                      <div class="me-auto">
+                        <div class="small text-muted">
+                          Autor: <strong>Peraque</strong> &nbsp;
+                          <span class="text-secondary">Data: 25/09/2025</span>
+                        </div>
+                        <div>
+                          A Verdade Sobre o Minimalismo: o Ninguém Te Conta
+                        </div>
+                      </div>
+                      <div class="ms-2">
+                        <button class="btn btn-sm btn-primary">Editar</button>
+                        <button class="btn btn-sm btn-danger">Excluir</button>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="list-group-item">
+                    <div class="d-flex flex-wrap align-items-center">
+                      <div class="me-auto">
+                        <div class="small text-muted">
+                          Autor: <strong>Elpidio</strong> &nbsp;
+                          <span class="text-secondary">Data: 25/09/2025</span>
+                        </div>
+                        <div>
+                          Guia Completo para Iniciantes: Como Criar um Blog de
+                          Sucesso
+                        </div>
+                      </div>
+                      <div class="ms-2">
+                        <button class="btn btn-sm btn-primary">Editar</button>
+                        <button class="btn btn-sm btn-danger">Excluir</button>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="list-group-item">
+                    <div class="d-flex flex-wrap align-items-center">
+                      <div class="me-auto">
+                        <div class="small text-muted">
+                          Autor: <strong>Jonatan da Nova Geração</strong> &nbsp;
+                          <span class="text-secondary">Data: 25/09/2025</span>
+                        </div>
+                        <div>
+                          Os 7 Erros Mais Comuns em Marketing Digital e Como
+                          Evitá-los
+                        </div>
+                      </div>
+                      <div class="ms-2">
+                        <button class="btn btn-sm btn-primary">Editar</button>
+                        <button class="btn btn-sm btn-danger">Excluir</button>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="list-group-item">
+                    <div class="d-flex flex-wrap align-items-center">
+                      <div class="me-auto">
+                        <div class="small text-muted">
+                          Autor: <strong>John Doe</strong> &nbsp;
+                          <span class="text-secondary">Data: 25/09/2025</span>
+                        </div>
+                        <div>
+                          Como Melhorar sua Produtividade em 5 Passos Simples
+                        </div>
+                      </div>
+                      <div class="ms-2">
+                        <button class="btn btn-sm btn-primary">Editar</button>
+                        <button class="btn btn-sm btn-danger">Excluir</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Form de edição -->
+            <h5 class="card-title mb-3 fw-bold">Editar Post</h5>
+            <div class="card form-card mb-4 bg-light">
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label class="form-label" for="titulo">Título</label>
+                    <input
+                      id="titulo"
+                      type="text"
+                      class="form-control"
+                      value="O Impacto das Redes Sociais na Saúde Mental: O Que Você Precisa Saber"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="conteudo">Conteúdo</label>
+                    <textarea id="conteudo" rows="6" class="form-control">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum iure fugit doloremque, beatae est pariatur cum ipsum praesentium laboriosam? Voluptates quibusdam rem numquam illum, dolorem unde saepe debitis adipisci.</textarea
+                    >
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="autor">Autor</label>
+                      <input
+                        id="autor"
+                        type="text"
+                        class="form-control"
+                        value="Fulano de Tal"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="data">Data</label>
+                      <input
+                        id="data"
+                        type="date"
+                        class="form-control"
+                        value="2025-09-25"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-between mt-3">
+                    <button type="button" class="btn btn-danger">
+                      Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-success">
+                      Salvar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
