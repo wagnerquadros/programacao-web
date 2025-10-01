@@ -98,7 +98,7 @@ for (let i = 0; i < equipes.length; i++) {
   console.log(equipes[i].nome);
 }
 
-console.log("\n=== Usando while ===");
+console.log("\n=== Usando while ===   ");
 let i = 0;
 while (i < equipes.length) {
   console.log(equipes[i].nome);
@@ -171,3 +171,15 @@ console.log("Todos os músicos:", nomesCompletos);
 
 const ramones = nomesCompletos.filter(nome => nome.endsWith("Ramone"));
 console.log("Ramones:", ramones);
+
+
+function somaValores(x,y) {
+  return x+y
+}
+
+console.log(somaValores(2,3))
+
+function ehPar (numero) {
+  return numero % 2 === 0
+}
+
