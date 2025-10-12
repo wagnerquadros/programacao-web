@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "titulo": "Título do Post 1",
+      "conteudo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur laboriosam...",
+      "data": "2025-10-10",
+      "categorias": ["Tecnologia", "Informação", "Redes Sociais"]
+    },
+    {
+      "id": 2,
+      "titulo": "Título do Post 2",
+      "conteudo": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore deleniti officia...",
+      "data": "2025-10-09",
+      "categorias": ["Design", "Novidades"]
+    },
+    {
+      "id": 3,
+      "titulo": "Título do Post 3",
+      "conteudo": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nam...",
+      "data": "2025-10-08",
+      "categorias": ["Desenvolvimento", "Tutoriais", "Destaques"]
+    }
+  ]
+}

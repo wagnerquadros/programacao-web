@@ -1,0 +1,152 @@
+/* fundo cinza e textos */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #d3d7db;
+  color: #000;
+}
+
+/* centraliza conteúdo */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* cabeçalho com título à esquerda e botão/link à direita */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* links */
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* cartões da listagem */
+.card {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #f5f5f5;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 18px;
+  color: blue;
+}
+
+.card small {
+  color: #555;
+}
+
+.card p {
+  margin: 8px 0 6px;
+}
+
+.meta {
+  font-size: 14px;
+  color: #555;
+}
+
+.meta strong {
+  color: #000;
+}
+
+/* botões */
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: blue;
+}
+.btn-ok {
+  background-color: green;
+}
+.btn-danger {
+  background-color: red;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+/* formulário */
+.form-group {
+  margin: 15px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* checkboxes */
+.checklist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checklist label {
+  margin-right: 16px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* área inferior do formulário */
+.footer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}

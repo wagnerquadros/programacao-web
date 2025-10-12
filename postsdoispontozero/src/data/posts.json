@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "titulo": "Post 1",
+    "conteudo": "Conteúdo do Post 1.",
+    "data": "2025-10-10",
+    "categorias": ["design", "tecnologias"]
+  },
+  {
+    "id": 2,
+    "titulo": "Post 2",
+    "conteudo": "Conteúdo do Post 2.",
+    "data": "2025-10-09",
+    "categorias": ["novidades", "informação"]
+  },
+  {
+    "id": 3,
+    "titulo": "Post 3",
+    "conteudo": "Conteúdo do Post 3.",
+    "data": "2025-10-08",
+    "categorias": ["tutoriais", "tecnologias"]
+  }
+]
