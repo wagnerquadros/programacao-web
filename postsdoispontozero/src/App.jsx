@@ -1,48 +1,122 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import ViewPost from "./pages/ViewPost.jsx";
 import AddPost from "./pages/AddPost.jsx";
 import EditPost from "./pages/EditPost.jsx";
-import postsData from "./data/posts.json";
+
+import {
+  listenPosts,
+  createPost,
+  updatePost as updatePostApi,
+  deletePost as deletePostApi,
+} from "./api/postsApi";
+
+import { onUserChanged, loginWithGoogle, logout } from "./auth";
 
 export default function App() {
-  const initial = useMemo(() => postsData, []);
-  const [posts, setPosts] = useState(initial);
+  const [posts, setPosts] = useState([]);
+  const [loadingPosts, setLoadingPosts] = useState(true);
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  function nextId() {
-    return posts.length ? Math.max(...posts.map((p) => p.id)) + 1 : 1;
-  }
+  // Posts em tempo real
+  useEffect(() => {
+    const unsub = listenPosts((items) => {
+      setPosts(items);
+      setLoadingPosts(false);
+    });
+    return () => unsub();
+  }, []);
 
-  function addPost(data) {
-    setPosts((prev) => [...prev, { ...data, id: nextId() }]);
+  // Sessão do usuário
+  useEffect(() => {
+    const unsub = onUserChanged(setUser);
+    return () => unsub();
+  }, []);
+
+  async function addPost(data) {
+    // Se quiser exigir login para criar:
+    if (!user) {
+      alert("Faça login para criar posts.");
+      return;
+    }
+    // opcional: incluir dono do post
+    await createPost({
+      ...data,
+      ownerUid: user.uid,
+      ownerName: user.displayName || user.email || "Usuário",
+    });
     navigate("/");
   }
 
-  function updatePost(id, data) {
-    setPosts((prev) => prev.map((p) => (p.id === id ? { ...p, ...data } : p)));
+  async function updatePost(id, data) {
+    if (!user) {
+      alert("Faça login para editar posts.");
+      return;
+    }
+    await updatePostApi(id, data);
     navigate("/");
   }
 
-  function deletePost(id) {
+  async function deletePost(id) {
+    if (!user) {
+      alert("Faça login para excluir posts.");
+      return;
+    }
     if (!confirm("Tem certeza que deseja excluir este post?")) return;
-    setPosts((prev) => prev.filter((p) => p.id !== id));
+    await deletePostApi(id);
     navigate("/");
+  }
+
+  if (loadingPosts) {
+    return (
+      <p className="meta" style={{ padding: 16 }}>
+        Carregando...
+      </p>
+    );
   }
 
   return (
-    <Routes>
-      <Route path="/" element={<Home posts={posts} />} />
-      <Route path="/post/new" element={<AddPost onSave={addPost} />} />
-      <Route
-        path="/post/:id"
-        element={<ViewPost posts={posts} onDelete={deletePost} />}
-      />
-      <Route
-        path="/post/:id/edit"
-        element={<EditPost posts={posts} onSave={updatePost} />}
-      />
-    </Routes>
+    <>
+      {/* Barra simples de usuário */}
+      <div className="container" style={{ paddingTop: 12 }}>
+        <div className="header">
+          <div />
+          <div>
+            {user ? (
+              <>
+                <span className="meta" style={{ marginRight: 10 }}>
+                  Olá, {user.displayName || user.email}
+                </span>
+                <button className="btn btn-danger" onClick={logout}>
+                  Sair
+                </button>
+              </>
+            ) : (
+              <button
+                className="btn btn-primary"
+                onClick={() => loginWithGoogle()}
+              >
+                Entrar com Google
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <Routes>
+        <Route path="/" element={<Home posts={posts} />} />
+        <Route path="/post/new" element={<AddPost onSave={addPost} />} />
+        <Route
+          path="/post/:id"
+          element={<ViewPost posts={posts} onDelete={deletePost} />}
+        />
+        <Route
+          path="/post/:id/edit"
+          element={<EditPost posts={posts} onSave={updatePost} />}
+        />
+      </Routes>
+    </>
   );
 }

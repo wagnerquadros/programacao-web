@@ -14,6 +14,8 @@ function App() {
     { nome: "prod 4", preco: 10 },
     { nome: "prod 5", preco: 120 },
     { nome: "prod 6", preco: 80 },
+    { nome: "Prod 7", preco: 12 },
+    { nome: "Prod 8", preco: 55 },
   ];
 
   function adicionarAoCarrinho(produto) {

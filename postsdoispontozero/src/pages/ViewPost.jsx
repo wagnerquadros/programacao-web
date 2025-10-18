@@ -4,7 +4,7 @@ import { formatarData } from "../Utils.js";
 
 export default function ViewPost({ posts, onDelete }) {
   const { id } = useParams();
-  const post = posts.find((p) => p.id === Number(id));
+  const post = posts.find((p) => p.id === id);
 
   if (!post) {
     return (
