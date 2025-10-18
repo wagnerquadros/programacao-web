@@ -1,22 +1,35 @@
-function ListaProdutos() {
+import CardProduto from "./CardProduto";
 
-    return (
-    
-            <div>
-                <h1>Lista de Produtos</h1>
-                <div>
-                    <div className="card" style="width: 18rem;">
-                        <img src="https://placehold.co/300x200/black/white/png/?text=prod 1" className="card-img-top" alt="Imagem"/>
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-    )
+function ListaProdutos({ produtos, comprar }) {
+  return (
+    <section className="mt-4">
+      <h2>Lista de Produtos</h2>
+      <div className="row mt-3 g-3">
+        {produtos.map((p, index) => (
+          <div key={index} className="col-lg-2">
+            <CardProduto
+              nome={p.nome}
+              preco={p.preco}
+              comprar={() => comprar(p)}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
-export default ListaProdutos
+export default ListaProdutos;
+
+/*
+CLASSES BOOTSTRAP USADAS:
+
+- mt-4 → “margin-top” de 1.5rem (cria espaçamento acima da seção).
+- row → cria uma linha da grid do Bootstrap (sistema de 12 colunas flexíveis).
+- mt-3 → “margin-top” de 1rem (espaço acima da linha de produtos).
+- g-3 → “gap” de 1rem entre colunas e linhas, mantendo espaçamento uniforme entre cards.
+
+Na div que envolve cada produto:
+- col-lg-2 → em telas grandes (≥992px), o card ocupa 1/6 da largura (6 por linha).
+
+*/
