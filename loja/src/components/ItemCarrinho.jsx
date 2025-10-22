@@ -10,7 +10,7 @@ function ItemCarrinho({ nome, preco, excluir }) {
         />
         <div>
           <strong>{nome}</strong>
-          <div className="text-muted">R$ {preco}</div>
+          <div>R$ {preco}</div>
         </div>
       </div>
       <button className="btn btn-warning btn-sm" onClick={excluir}>

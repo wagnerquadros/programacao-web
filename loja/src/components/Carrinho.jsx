@@ -1,12 +1,20 @@
 import ItemCarrinho from "./ItemCarrinho";
+import { useNavigate } from "react-router-dom";
 
 function Carrinho({ itens, excluir }) {
   const total = itens.reduce((soma, item) => soma + item.preco, 0);
+  
+  const navigate = useNavigate();
+
+  function irParaPaginaCarrinho() {
+    navigate(`/carrinho`);
+  }
+
 
   return (
     <section className="my-4 container">
-      <h2>Carrinho</h2>
-      <div className="bg-light p-3">
+      <h2 className="text-primary cursor-pointer text-decoration-underline" onClick={irParaPaginaCarrinho} >Carrinho</h2>
+      <div className="bg-light p-3" >
         <div className="d-flex justify-content-between">
           <p className="mb-1">Itens: {itens.length}</p>
           <p className="mb-1 fw-bold">Total: R$ {total}</p>
