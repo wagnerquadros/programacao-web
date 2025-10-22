@@ -8,6 +8,7 @@ function ListaProdutos({ produtos, comprar, verDetalhes }) {
           <CardProduto
             nome={p.nome}
             preco={p.preco}
+            avaliacao={Number(p.avaliacao) || 0}
             comprar={() => comprar(p)}
             verDetalhes={verDetalhes}
           />
@@ -18,5 +19,3 @@ function ListaProdutos({ produtos, comprar, verDetalhes }) {
 }
 
 export default ListaProdutos;
-
-

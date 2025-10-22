@@ -1,0 +1,40 @@
+{
+  "produtos": [
+    {
+      "id": "abb2cb27-5843-4894-ac15-fa5442506edd",
+      "nome": "Abobora",
+      "preco": 10,
+      "avaliacao": 1,
+      "quantidadeAvaliacoes": 0
+    },
+    {
+      "id": "9932d474-cbec-452c-b945-47e6262044f1",
+      "nome": "Raquete",
+      "preco": 10,
+      "avaliacao": 1,
+      "quantidadeAvaliacoes": 0
+    },
+    {
+      "id": "cab8b8d3-6a16-46b6-a2a1-f13436023c94",
+      "nome": "Coca",
+      "preco": 45,
+      "avaliacao": 5,
+      "quantidadeAvaliacoes": 5
+    },
+    {
+      "id": "57153b9f-e766-4a96-a37a-227ea4790490",
+      "nome": "AR15",
+      "preco": 10,
+      "avaliacao": 5,
+      "quantidadeAvaliacoes": 80
+    },
+    {
+      "id": "2a3b82ec-dde5-4983-b004-290b56784129",
+      "nome": "Chevette 77",
+      "preco": 50000,
+      "avaliacao": 5,
+      "quantidadeAvaliacoes": 546,
+      "descricao": "Chevrollet Chevette bico de tubarão TOP"
+    }
+  ]
+}
