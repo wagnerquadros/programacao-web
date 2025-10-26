@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import BotaoVoltar from "./BotaoVoltar";
+import BotaoVoltar from "../components/BotaoVoltar";
 
 function DetalheProduto() {
   const { nome } = useParams();
@@ -60,8 +60,6 @@ function DetalheProduto() {
               </span>
             ))}
           </div>
-
-          <button className="btn btn-success btn-lg">Comprar</button>
         </div>
       </div>
     </div>

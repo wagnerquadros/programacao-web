@@ -29,7 +29,7 @@ function CardProduto({ nome, preco, avaliacao, comprar }) {
   }
 
   return (
-    <div className="card text-center">
+    <div className="card text-center mb-4">
       <img
         src={`https://placehold.co/300x200/000000/FFFFFF/png?text=${encodeURIComponent(
           nome

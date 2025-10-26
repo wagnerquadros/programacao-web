@@ -1,13 +1,6 @@
 {
   "produtos": [
     {
-      "id": "abb2cb27-5843-4894-ac15-fa5442506edd",
-      "nome": "Abobora",
-      "preco": 10,
-      "avaliacao": 1,
-      "quantidadeAvaliacoes": 0
-    },
-    {
       "id": "9932d474-cbec-452c-b945-47e6262044f1",
       "nome": "Raquete",
       "preco": 10,
@@ -35,6 +28,68 @@
       "avaliacao": 5,
       "quantidadeAvaliacoes": 546,
       "descricao": "Chevrollet Chevette bico de tubarão TOP"
+    },
+    {
+      "id": "f3997ae9-1304-49d0-b8d7-a9924d03328d",
+      "nome": "Caneca",
+      "preco": 120,
+      "avaliacao": 1,
+      "quantidadeAvaliacoes": 50,
+      "descricao": "Caneca histórica do Jô 11 e meia"
+    },
+    {
+      "id": "228effbd-36a9-4871-9286-a8e1674deb55",
+      "nome": "Chá",
+      "preco": 5,
+      "avaliacao": 5,
+      "quantidadeAvaliacoes": 500,
+      "descricao": "Chazinho top"
+    },
+    {
+      "id": "99d516e2-5eaf-406c-b244-aab6de3ae387",
+      "nome": "Trembolona",
+      "preco": 50,
+      "avaliacao": 4,
+      "quantidadeAvaliacoes": 500,
+      "descricao": "Suplemento alimentar"
+    },
+    {
+      "id": "34dcbe7e-5500-4c5c-bdc7-c83052b344cd",
+      "nome": "Microfone",
+      "preco": 5616,
+      "avaliacao": 4,
+      "quantidadeAvaliacoes": 0,
+      "descricao": "Micro"
+    }
+  ],
+  "compras": [
+    {
+      "id": "75b2ba50-cad1-4469-aca1-962a291b6258",
+      "itens": [
+        {
+          "produtoId": "f3997ae9-1304-49d0-b8d7-a9924d03328d",
+          "nome": "Caneca",
+          "preco": 120,
+          "quantidade": 1,
+          "subtotal": 120
+        }
+      ],
+      "total": 120,
+      "criadoEm": "2025-10-26T18:00:55.582Z"
+    },
+    {
+      "id": "6c40cf59-c6a8-4df5-ba85-3a3df8886905",
+      "itens": [
+        {
+          "produtoId": "2a3b82ec-dde5-4983-b004-290b56784129",
+          "nome": "Chevette 77",
+          "preco": 50000,
+          "quantidade": 1,
+          "subtotal": 50000
+        }
+      ],
+      "total": 50000,
+      "criadoEm": "2025-10-26T18:02:30.435Z"
     }
   ]
 }

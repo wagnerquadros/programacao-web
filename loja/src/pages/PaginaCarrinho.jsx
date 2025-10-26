@@ -1,4 +1,14 @@
-import BotaoVoltar from "./BotaoVoltar";
+import BotaoVoltar from "../components/BotaoVoltar";
+
+async function postCompra(compra) {
+  const r = await fetch(`http://localhost:3001/compras`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(compra),
+  });
+  if (!r.ok) throw new Error("Falha ao salvar compra");
+  return r.json();
+}
 
 function PaginaCarrinho({
   itens,
@@ -20,6 +30,32 @@ function PaginaCarrinho({
     (soma, lin) => soma + Number(lin.produto.preco || 0) * lin.quantidade,
     0
   );
+
+  async function finalizarAgora() {
+    if (linhas.length === 0) return;
+
+    const compra = {
+      id: crypto.randomUUID(),
+      itens: linhas.map(({ produto, quantidade }) => ({
+        produtoId: produto.id ?? null,
+        nome: produto.nome,
+        preco: Number(produto.preco || 0),
+        quantidade,
+        subtotal: Number(produto.preco || 0) * quantidade,
+      })),
+      total: Number(total.toFixed(2)),
+      criadoEm: new Date().toISOString(),
+    };
+
+    try {
+      await postCompra(compra);
+      finalizar();
+      alert("Compra registrada com sucesso!");
+    } catch (e) {
+      console.error(e);
+      alert("Erro ao salvar a compra.");
+    }
+  }
 
   return (
     <div className="container my-5">
@@ -60,7 +96,7 @@ function PaginaCarrinho({
                       </div>
                     </td>
 
-                    <td>R$ {Number(produto.preco).toFixed(2)}</td>
+                    <td>R$ {Number(produto.preco || 0).toFixed(2)}</td>
 
                     <td>
                       <div className="d-flex align-items-center gap-2">
@@ -81,7 +117,7 @@ function PaginaCarrinho({
                     </td>
 
                     <td>
-                      R$ {(Number(produto.preco) * quantidade).toFixed(2)}
+                      R$ {(Number(produto.preco || 0) * quantidade).toFixed(2)}
                     </td>
 
                     <td>
@@ -112,7 +148,7 @@ function PaginaCarrinho({
             <button className="btn btn-danger" onClick={limparTudo}>
               Limpar carrinho
             </button>
-            <button className="btn btn-success" onClick={finalizar}>
+            <button className="btn btn-success" onClick={finalizarAgora}>
               Finalizar compra
             </button>
           </div>

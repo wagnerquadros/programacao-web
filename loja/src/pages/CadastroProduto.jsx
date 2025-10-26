@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BotaoVoltar from "./BotaoVoltar";
+import BotaoVoltar from "../components/BotaoVoltar";
 import { useNavigate } from "react-router-dom";
 
 function CadastroProduto({ atualizarLista }) {

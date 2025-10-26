@@ -4,10 +4,13 @@ import Nav from "./components/Nav";
 import ListaProdutos from "./components/ListaProdutos";
 import Carrinho from "./components/Carrinho";
 import Rodape from "./components/Rodape";
-import DetalheProduto from "./components/DetalheProduto";
-import BotaoAdicionarProduto from "./components/BotaoAdicionarProduto";
-import CadastroProduto from "./components/CadastroProduto";
-import PaginaCarrinho from "./components/PaginaCarrinho";
+import DetalheProduto from "./pages/DetalheProduto";
+import BotaoGerenciamento from "./components/BotaoGerencimento";
+import CadastroProduto from "./pages/CadastroProduto";
+import PaginaCarrinho from "./pages/PaginaCarrinho";
+import Pagina404 from "./pages/Pagina404";
+import Gerenciamento from "./pages/Gerenciamento";
+import PaginaCompraDetalhe from "./pages/PaginaCompraDetalhe";
 
 function App() {
   const [carrinho, setCarrinho] = useState([]);
@@ -85,7 +88,7 @@ function App() {
                   produtos={produtos}
                   comprar={adicionarAoCarrinho}
                 />
-                <BotaoAdicionarProduto />
+                <BotaoGerenciamento />
               </>
             }
           />
@@ -110,6 +113,9 @@ function App() {
               />
             }
           />
+          <Route path="/gerenciamento" element={<Gerenciamento />} />
+          <Route path="/compras/:id" element={<PaginaCompraDetalhe />} />
+          <Route path="*" element={<Pagina404 />} />
         </Routes>
       </main>
 
